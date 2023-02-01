@@ -4,8 +4,10 @@ from price import price
 
 app = Dash(__name__)
 
+server = app.server
+
 app.layout = html.Div([
-   html.H1(children='Price Compare'),
+  html.H1(children='Price Compare'),
   html.Div(children=[
             dcc.Input(id="prtinput", type="text", placeholder='Enter Product name'),
             #html.Button('Enter', id='enter', n_clicks=0)
@@ -94,5 +96,5 @@ def prod(rows,prtname):
   return records
   
 #if __name__ == '__main__':
-#    app.run_server(debug=True)
-app.run_server(host='0.0.0.0', port=8081, debug=True)
+    app.run_server(debug=True, port=os.getenv("PORT", default=5000))
+#app.run_server(host='0.0.0.0', port=8081, debug=True)
