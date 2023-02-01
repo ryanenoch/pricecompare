@@ -95,6 +95,6 @@ def prod(rows,prtname):
 
   return records
   
-#if __name__ == '__main__':
+if __name__ == '__main__':
     app.run_server(debug=True, port=os.getenv("PORT", default=5000))
 #app.run_server(host='0.0.0.0', port=8081, debug=True)
