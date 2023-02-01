@@ -1,0 +1,18 @@
+/*main background*/
+body {
+background-color:white ;
+}
+
+/*for HTML header H1*/
+h1 {
+  color: black;
+  text-align: center;
+  background-color: transparent;
+}
+
+/*input bar*/
+input {
+    background-color: white;
+}
+
+/*datatable?*/
