@@ -2,14 +2,15 @@ from dash import Dash, dash_table, dcc, html
 from dash.dependencies import Input, Output, State
 from price import price
 
+stores=['Giant Tiger','Food Basics','Metro','Some Random Grocery Store']
 app = Dash(__name__)
-
 server = app.server
 
 app.layout = html.Div([
   html.H1(children='Price Compare'),
   html.Div(children=[
             dcc.Input(id="prtinput", type="text", placeholder='Enter Product name'),
+            dcc.Dropdown(id="storinput", options=stores,placeholder='Filter by store'),
             #html.Button('Enter', id='enter', n_clicks=0)
         ],
                  style={
@@ -46,8 +47,14 @@ app.layout = html.Div([
                     'renamable': False
                 },
                 {
-                    'name': 'Price (CAD)',
-                    'id': 'price',
+                    'name': 'Regular Price (CAD)',
+                    'id': 'reg_price',
+                    'deletable': False,
+                    'renamable': False
+                },
+                {
+                    'name': 'Rewards Price (CAD)',
+                    'id': 'rew_price',
                     'deletable': False,
                     'renamable': False
                 }
@@ -81,10 +88,11 @@ app.layout = html.Div([
 @app.callback(
   Output('table','data'),
   State('table','data'),
-  Input("prtinput", "value")
+  Input("prtinput", "value"),
+  Input("storinput", "value")
 )
-def prod(rows,prtname):
-  resultdf=price(prtname)
+def prod(rows,prtname,storname):
+  resultdf=price(prtname,storname)
   print(resultdf)
   print()
   
