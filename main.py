@@ -14,7 +14,7 @@ app.layout = html.Div([
             #html.Button('Enter', id='enter', n_clicks=0)
         ],
                  style={
-                     'display': 'flex',
+                     'display': 'grid',
                      'justify-content': 'center'
                  }),
           html.Br(),
