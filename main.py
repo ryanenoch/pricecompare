@@ -58,6 +58,7 @@ app.layout = html.Div([
             style_cell={
                 'fontSize': 15,
                 'font-family': 'sans-serif',
+                'backgroundColor': 'mintcream',
                 'whiteSpace': 'normal',#wordwrap for cells
                 'textAlign': 'center'  #to center align the text in the cell 
             },
@@ -71,7 +72,7 @@ app.layout = html.Div([
             style_header={
                 'padding-left': '20 px',
                 'padding-right': '20 px',
-                'backgroundColor': 'lightblue',  #table header BG color
+                'backgroundColor': 'lightgreen',  #table header BG color
                 'fontWeight': 'bold',
                 'color': 'black',
                 'whiteSpace': 'normal'  #wordwrap for headers
