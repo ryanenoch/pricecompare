@@ -8,11 +8,18 @@ h1 {
   color: black;
   text-align: center;
   background-color: transparent;
+  font-family: Gill Sans Nova, Verdana;
 }
 
 /*input bar*/
 input {
     background-color: white;
+    font-family: Gill Sans Nova, Verdana;
+}
+
+/*for HTML paragraphs*/
+p {
+    font-family: Gill Sans Nova, Verdana;
 }
 
 /*footer*/
@@ -20,4 +27,3 @@ footer{
   text-align: center;
 }
 
-/*datatable?*/
