@@ -77,7 +77,7 @@ app.layout = html.Div([
                 'whiteSpace': 'normal'  #wordwrap for headers
             }),
   html.Br(),
-  html.Footer(html.P('Made in SSM🇨🇦'))
+  html.Footer(html.P('Made in Sault Ste. Marie🇨🇦'))
 ],style={'font-family': 'sans-serif'})
 
 @app.callback(
