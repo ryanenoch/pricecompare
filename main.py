@@ -76,6 +76,8 @@ app.layout = html.Div([
                 'color': 'black',
                 'whiteSpace': 'normal'  #wordwrap for headers
             }),
+  html.Br(),
+  html.Footer(html.P('Made in SSM🇨🇦'))
 ],style={'font-family': 'sans-serif'})
 
 @app.callback(
