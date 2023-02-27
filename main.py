@@ -77,7 +77,10 @@ app.layout = html.Div([
                 'whiteSpace': 'normal'  #wordwrap for headers
             }),
   html.Br(),
-  html.Footer(html.P('Made in Sault Ste. Marie🇨🇦'))
+  html.Footer([
+    html.P('Made in Sault Ste. Marie🇨🇦'),
+    html.P('© 2023 Ryan Enoch')
+  ])
 ],style={'font-family': 'sans-serif'})
 
 @app.callback(
